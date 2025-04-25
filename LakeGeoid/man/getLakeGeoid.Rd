@@ -7,13 +7,13 @@
 getLakeGeoid(dat, maxEdge, myshape, UTM = TRUE)
 }
 \arguments{
-\item{dat}{Input data set; must at least contain columns names: time \link{decimal years}, lon (longitude in decimal degrees ), lat (latitude in decimal degrees), height (meters)}
+\item{dat}{Input data set; must at least contain columns names: time (decimal years), lon (longitude in decimal degrees ), lat (latitude in decimal degrees), height (meters)}
 
 \item{maxEdge}{Maximum side length of the triangles in the mesh (created by the function "fm_mesh_2d" from the package "fmesher").}
 
 \item{myshape}{a shapefile/polygon of the class "sf" defining the boundary of the lake where the model will be reconstructed.}
 
-\item{UTM}{logic variable to specify if the coordinates should be projected to UTM coordinates \link{the default is TRUE}}
+\item{UTM}{logic variable to specify if the coordinates should be projected to UTM coordinates (the default is TRUE)}
 }
 \description{
 The function getLakeGeoid reconstruct a static spatial water level signal and a water level time series. The static spatial signal is modeled as a Gaussian Markov Random Field on a triangular mesh where the nodes specifies the neighbor structure. The water level time series is modeled with an Random Walk as the underlying process and the observation error is here assumed to be Gaussian. The Static spatial field is here intended to models potential missing geoid model signals.

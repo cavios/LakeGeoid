@@ -32,7 +32,7 @@ f <- function(par){
 ##' @import RTMB
 ##' @import fmesher
 ##' @import terra
-##' @import sf
+##' @importFrom  sf st_transform
 ##' @export
 
 getLakeGeoid<-function(dat,maxEdge,myshape,UTM=TRUE){
