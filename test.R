@@ -9,6 +9,7 @@ data(C2kivu) # CryoSat-2 data for lake Kivu
 shpsimple<-st_simplify(myshape,dTolerance=300)
 fit<-getLakeGeoid(kivu,maxEdge=3000,myshape=shpsimple,UTM=TRUE)
 plot(fit)
+
 summary(fit)
 print(fit)
 #get geoid correction at the coordinates of CryoSat-2 
